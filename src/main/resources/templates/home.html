@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="EUC-KR">
+<title>Duke</title>
+</head>
+<body>
+  <h1>Welcome to...</h1>
+  <!--
+    <img> 태그 에서는
+    컨텍스트의 상대적인 경로에 위치하는 이미지를 참조하는 @{...} 표현식을 사용해서 Thymeleaf의 th:src 속성을 지정한다
+    -->
+  <img th:src="@{/images/duke.png}"/>
+</body>
+</html>
