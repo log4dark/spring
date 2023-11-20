@@ -1,5 +1,6 @@
-package com.log4dark.spring.service;
+package com.log4dark.spring.service.bean;
 
+import com.log4dark.spring.service.bean.InventoryService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

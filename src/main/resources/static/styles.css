@@ -1,0 +1,36 @@
+@charset "EUC-KR";
+
+/*
+ 2023.11.21 [dark]
+ - 각 유형의 식자재들을 길게 가로로 나타내는 대신 두 개의 컬럼으로 보여주는 스타일만 포함한다.
+ */
+
+div.ingredient-group:nth-child(odd) {
+	float: left;
+	padding-right: 20px;
+}
+
+div.ingredient-group:nth-child(even) {
+	float: left;
+	padding-right: 0;
+}
+
+div.ingredient-group {
+	width: 50%;
+}
+
+.grid:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+span.validationError {
+	color: red;
+}

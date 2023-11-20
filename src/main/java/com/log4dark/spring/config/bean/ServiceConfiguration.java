@@ -1,7 +1,7 @@
-package com.log4dark.spring.config;
+package com.log4dark.spring.config.bean;
 
-import com.log4dark.spring.service.InventoryService;
-import com.log4dark.spring.service.ProductService;
+import com.log4dark.spring.service.bean.InventoryService;
+import com.log4dark.spring.service.bean.ProductService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

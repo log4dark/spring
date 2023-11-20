@@ -1,12 +1,15 @@
 package com.log4dark.spring;
 
-import com.log4dark.spring.service.ProductService;
+import com.log4dark.spring.service.bean.ProductService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 
 /**
  * - 스프링은 '스프링 애플리케이션 컨텍스트'(Spring application context)라는 '컨테이너'(container) 제공.
@@ -35,6 +38,14 @@ public class Application implements ApplicationRunner { // 요넘이 부트스�
         log.info("Run dark ...");
 
         productService.display();
+
+        // - Timestamp: 2023-11-03 02:29:17.123
+        Timestamp createdAt = new Timestamp(System.currentTimeMillis());
+        // - Timestamp to String formatting: 2023-11-03T02:29:17.123
+        String createdAt2String = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS").format(createdAt);
+
+        log.info("createdAt2String: {} ", createdAt2String);
+
 
         log.info("Stop dark ...");
     }

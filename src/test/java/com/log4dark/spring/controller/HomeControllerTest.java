@@ -1,7 +1,8 @@
 package com.log4dark.spring.controller;
 
+import com.log4dark.spring.tacos.controller.HomeController;
+import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -18,7 +19,7 @@ class HomeControllerTest {
 
     // - 실제 서버 시작 대신 스프링 MVC의 모의(mocking) 매커니즘 사용
     // - MockMvc 객체로 '/'의 HTTP GET 요청을 수행
-    @Autowired
+    @Resource
     private MockMvc mockMvc; // MockMvc를 주입.
 
     @Test

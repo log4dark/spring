@@ -1,4 +1,4 @@
-package com.log4dark.spring.controller;
+package com.log4dark.spring.tacos.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ public class HomeController {
     @GetMapping("/")
     public String home() {
         log.info("home() - start...");
-        return "home"; // 뷰 이름을 반환한다. (이 값은 뷰의 논리적인 이름)
+        return "/home"; // 뷰 이름을 반환한다. (이 값은 뷰의 논리적인 이름)
         /*
         논리적인 뷰 이름(home) 앞에 /templates/가 붙고 끝에는 .html이 추가된 것이 템플릿 경로와 파일이름 되므로
         여기서는 /templates/home.html이 된다.
